@@ -1,0 +1,21 @@
+﻿@model Eve.Core.ViewModel.UserDataViewModel
+
+@{
+    Layout = "_LayoutNoHeader";
+    ViewData["title"] = "Login";
+}
+
+<div>
+    @using (Html.BeginForm("Login", "User", FormMethod.Post, new { id = "FormLogin" })) {
+        <div>
+            <h2>Iniciar sesión</h2>
+        </div>
+        <section>
+            <input asp-for="Username" />
+            <label asp-for="Username"></label>
+        </section>
+        <div>
+            <button onclick="">Ingresar</button>
+        </div>
+    }
+</div>
